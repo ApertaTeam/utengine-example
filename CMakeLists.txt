@@ -2,7 +2,11 @@ cmake_minimum_required(VERSION 2.8)
 project(utengine-example)
 
 add_subdirectory(utengine)
-include_directories(utengine/includes)
+include_directories(includes/
+                    utengine/includes/
+                    ${GLEW_INCLUDE_DIRS}
+                    ${OPENGL_INCLUDE_DIR}
+                    ${GLM_INCLUDE_DIRS})
 
 find_package(glfw3 3.3 REQUIRED)
 find_package(GLEW REQUIRED)
