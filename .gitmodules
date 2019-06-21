@@ -1,0 +1,3 @@
+[submodule "utengine"]
+	path = utengine
+	url = https://github.com/ApertaTeam/utengine.git
