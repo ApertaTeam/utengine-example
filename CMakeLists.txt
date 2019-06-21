@@ -2,16 +2,18 @@ cmake_minimum_required(VERSION 2.8)
 project(utengine-example)
 
 add_subdirectory(utengine)
+
+find_package(glfw3 3.3 REQUIRED)
+find_package(GLEW REQUIRED)
+find_package(OpenGL REQUIRED)
+find_package(glm REQUIRED)
+
 include_directories(includes/
                     utengine/includes/
                     ${GLEW_INCLUDE_DIRS}
                     ${OPENGL_INCLUDE_DIR}
                     ${GLM_INCLUDE_DIRS})
 
-find_package(glfw3 3.3 REQUIRED)
-find_package(GLEW REQUIRED)
-find_package(OpenGL REQUIRED)
-find_package(glm REQUIRED)
 
 file(GLOB PROJECT_HEADERS includes/*.h)
 file(GLOB PROJECT_SOURCES src/*.cpp)
